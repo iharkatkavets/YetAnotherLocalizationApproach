@@ -9,29 +9,30 @@ import Foundation
 
 typealias L = LocalizableKeys
 
+@propertyWrapper struct Localized {
+    var wrappedValue: String {
+        didSet { wrappedValue = wrappedValue.localized }
+    }
+
+    init(wrappedValue: String) {
+        self.wrappedValue = wrappedValue.localized
+    }
+}
+
 extension String {
     var localized: String {
         return NSLocalizedString(self, comment: "")
     }
 }
 
-struct LocalizableKey {
-    let key: String
-    
-    fileprivate init(_ key: String) {
-        self.key = key
-    }
-}
-
 struct LocalizableKeys {
-    
     struct Login {
-        static let ButtonLoginTitle = "Login.Button.Login.Title".localized
-        static let TextFieldUsernamePlaceholder = "Login.TextField.Username.Placeholder".localized
-        static let TextFieldPasswordPlaceholder = "Login.TextField.Password.Placeholder".localized
+        @Localized static var ButtonLoginTitle = "Login.Button.Login.Title"
+        @Localized static var TextFieldUsernamePlaceholder = "Login.TextField.Username.Placeholder"
+        @Localized static var TextFieldPasswordPlaceholder = "Login.TextField.Password.Placeholder"
     }
     struct Settings {
-        static let ButtonLogoutTitle = "Settings.Button.Logout.Title".localized
+        @Localized static var ButtonLogoutTitle = "Settings.Button.Logout.Title"
     }
 }
 
