@@ -6,33 +6,39 @@
 //
 
 import Foundation
+import AllLocalized
 
-typealias L = LocalizableKeys
+//@attached(memberAttribute)
+//public macro AllLocalized() = #externalMacro(module: "AllLocalizedPlugin", type: "AllLocalizedMacro")
 
 @propertyWrapper struct Localized {
-    var wrappedValue: String {
+    public var wrappedValue: String {
         didSet { wrappedValue = wrappedValue.localized }
     }
 
-    init(wrappedValue: String) {
+    public init(wrappedValue: String) {
         self.wrappedValue = wrappedValue.localized
     }
 }
 
-extension String {
+public extension String {
     var localized: String {
         return NSLocalizedString(self, comment: "")
     }
 }
 
+typealias L = LocalizableKeys
+
 struct LocalizableKeys {
+    @AllLocalized
     struct Login {
-        @Localized static var ButtonLoginTitle = "Login.Button.Login.Title"
-        @Localized static var TextFieldUsernamePlaceholder = "Login.TextField.Username.Placeholder"
-        @Localized static var TextFieldPasswordPlaceholder = "Login.TextField.Password.Placeholder"
+        static var ButtonLoginTitle = "Login.Button.Login.Title"
+        static var TextFieldUsernamePlaceholder = "Login.TextField.Username.Placeholder"
+        static var TextFieldPasswordPlaceholder = "Login.TextField.Password.Placeholder"
     }
+    @AllLocalized
     struct Settings {
-        @Localized static var ButtonLogoutTitle = "Settings.Button.Logout.Title"
+        static var ButtonLogoutTitle = "Settings.Button.Logout.Title"
     }
 }
 
