@@ -25,7 +25,7 @@ final class SettingsViewController: UIViewController {
     }
     
     @IBAction func didPressLogout(_ button: UIButton) {
-        
+        presenter?.userDidPressLogout()
     }
 }
 
