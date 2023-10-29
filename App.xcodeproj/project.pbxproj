@@ -24,6 +24,7 @@
 		5419A8BF2AEBAB600078F632 /* LoginScreenUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5419A8BE2AEBAB600078F632 /* LoginScreenUITests.swift */; };
 		5419A8C12AEBAC9A0078F632 /* UITestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5419A8C02AEBAC9A0078F632 /* UITestHelpers.swift */; };
 		54D12B432AEEA5A800EFEDCE /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54D12B422AEEA5A800EFEDCE /* AppState.swift */; };
+		54D12B472AEEAFB100EFEDCE /* SettingsScreenUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54D12B462AEEAFB100EFEDCE /* SettingsScreenUITests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +67,7 @@
 		5419A8C02AEBAC9A0078F632 /* UITestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITestHelpers.swift; sourceTree = "<group>"; };
 		5419A8C22AEBB22B0078F632 /* pl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pl; path = pl.lproj/Localizable.strings; sourceTree = "<group>"; };
 		54D12B422AEEA5A800EFEDCE /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
+		54D12B462AEEAFB100EFEDCE /* SettingsScreenUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsScreenUITests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,6 +144,7 @@
 			isa = PBXGroup;
 			children = (
 				5419A8BE2AEBAB600078F632 /* LoginScreenUITests.swift */,
+				54D12B462AEEAFB100EFEDCE /* SettingsScreenUITests.swift */,
 				5419A8C02AEBAC9A0078F632 /* UITestHelpers.swift */,
 			);
 			path = AppUITests;
@@ -343,6 +346,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5419A8BF2AEBAB600078F632 /* LoginScreenUITests.swift in Sources */,
+				54D12B472AEEAFB100EFEDCE /* SettingsScreenUITests.swift in Sources */,
 				5419A8C12AEBAC9A0078F632 /* UITestHelpers.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

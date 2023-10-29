@@ -10,7 +10,7 @@ import XCTest
 final class LoginScreenUITests: XCTestCase {
     var app: XCUIApplication!
     
-    func testElemensInitialStateInPlLocalization() throws {
+    func testElemensWithPlLocalization() throws {
         app = launchWithPlLocalization()
         let loginViewController = app.otherElements["LoginViewController"]
         XCTAssert(loginViewController.waitForExistence(timeout: 1))
@@ -28,7 +28,7 @@ final class LoginScreenUITests: XCTestCase {
         XCTAssertEqual("Zaloguj sie", loginButton.label)
     }
     
-    func testElemensInitialStateInEnLocalization() throws {
+    func testElemensWithEnLocalization() throws {
         app = launchWithEnLocalization()
         let loginViewController = app.otherElements["LoginViewController"]
         XCTAssert(loginViewController.waitForExistence(timeout: 1))
