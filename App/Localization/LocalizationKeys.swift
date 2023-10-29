@@ -33,6 +33,7 @@ struct LocalizableKeys {
     }
     struct Settings {
         @Localized static var ButtonLogoutTitle = "Settings.Button.Logout.Title"
+        @Localized static var WelcomeLabelFmt = "Settings.Label.Welcome.Fmt"
     }
 }
 
