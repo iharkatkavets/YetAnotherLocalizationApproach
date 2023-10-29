@@ -24,6 +24,8 @@
 		5419A8C12AEBAC9A0078F632 /* UITestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5419A8C02AEBAC9A0078F632 /* UITestHelpers.swift */; };
 		54D3E7722AED32DB0033F332 /* AllLocalized in Frameworks */ = {isa = PBXBuildFile; productRef = 54D3E7712AED32DB0033F332 /* AllLocalized */; };
 		54D3E7742AED33AE0033F332 /* AllLocalized in Frameworks */ = {isa = PBXBuildFile; productRef = 54D3E7732AED33AE0033F332 /* AllLocalized */; };
+		54D12B432AEEA5A800EFEDCE /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54D12B422AEEA5A800EFEDCE /* AppState.swift */; };
+		54D12B472AEEAFB100EFEDCE /* SettingsScreenUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54D12B462AEEAFB100EFEDCE /* SettingsScreenUITests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +59,8 @@
 		5419A8C02AEBAC9A0078F632 /* UITestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITestHelpers.swift; sourceTree = "<group>"; };
 		5419A8C22AEBB22B0078F632 /* pl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pl; path = pl.lproj/Localizable.strings; sourceTree = "<group>"; };
 		5419A8C62AED2DE60078F632 /* AllLocalized */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = AllLocalized; sourceTree = "<group>"; };
+		54D12B422AEEA5A800EFEDCE /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
+		54D12B462AEEAFB100EFEDCE /* SettingsScreenUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsScreenUITests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,8 +68,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				54D3E7742AED33AE0033F332 /* AllLocalized in Frameworks */,
-				54D3E7722AED32DB0033F332 /* AllLocalized in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -102,6 +104,7 @@
 		5419A8662AEB9ACD0078F632 /* App */ = {
 			isa = PBXGroup;
 			children = (
+				54D12B412AEEA59300EFEDCE /* Core */,
 				5419A8AD2AEBA6BE0078F632 /* Settings */,
 				5419A89B2AEBA5DA0078F632 /* Login */,
 				5419A8672AEB9ACD0078F632 /* AppDelegate.swift */,
@@ -126,6 +129,7 @@
 			isa = PBXGroup;
 			children = (
 				5419A8BE2AEBAB600078F632 /* LoginScreenUITests.swift */,
+				54D12B462AEEAFB100EFEDCE /* SettingsScreenUITests.swift */,
 				5419A8C02AEBAC9A0078F632 /* UITestHelpers.swift */,
 			);
 			path = AppUITests;
@@ -158,6 +162,14 @@
 				5419A8972AEB9B020078F632 /* LocalizationKeys.swift */,
 			);
 			path = Localization;
+			sourceTree = "<group>";
+		};
+		54D12B412AEEA59300EFEDCE /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				54D12B422AEEA5A800EFEDCE /* AppState.swift */,
+			);
+			path = Core;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -274,6 +286,7 @@
 				5419A8A92AEBA67B0078F632 /* LoginViewController.swift in Sources */,
 				5419A8A82AEBA67B0078F632 /* LoginPresenter.swift in Sources */,
 				5419A8B92AEBA7170078F632 /* AppCoordinator.swift in Sources */,
+				54D12B432AEEA5A800EFEDCE /* AppState.swift in Sources */,
 				5419A8B22AEBA6D20078F632 /* SettingsPresenter.swift in Sources */,
 				5419A8682AEB9ACD0078F632 /* AppDelegate.swift in Sources */,
 				5419A8982AEB9B020078F632 /* LocalizationKeys.swift in Sources */,
@@ -287,6 +300,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5419A8BF2AEBAB600078F632 /* LoginScreenUITests.swift in Sources */,
+				54D12B472AEEAFB100EFEDCE /* SettingsScreenUITests.swift in Sources */,
 				5419A8C12AEBAC9A0078F632 /* UITestHelpers.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
