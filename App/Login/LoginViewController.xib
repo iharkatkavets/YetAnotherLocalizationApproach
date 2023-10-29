@@ -3,12 +3,14 @@
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginViewController" customModule="App" customModuleProvider="target">
             <connections>
+                <outlet property="containerView" destination="vN6-xb-uue" id="2tA-KI-URT"/>
                 <outlet property="loginButton" destination="Bzt-Nk-Gi4" id="qh9-Ne-Zs8"/>
                 <outlet property="passwordTextField" destination="hps-Ce-s9i" id="sMA-KB-Zc4"/>
                 <outlet property="usernameTextField" destination="Ytu-sd-cQg" id="HsW-mX-pJO"/>
@@ -25,15 +27,23 @@
                     <subviews>
                         <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ytu-sd-cQg">
                             <rect key="frame" x="0.0" y="0.0" width="343" height="34"/>
+                            <color key="backgroundColor" name="LoginTextFieldBackground"/>
                             <accessibility key="accessibilityConfiguration" identifier="UsernameTextField"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <textInputTraits key="textInputTraits"/>
+                            <connections>
+                                <outlet property="delegate" destination="-1" id="iVm-QE-3Zb"/>
+                            </connections>
                         </textField>
                         <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hps-Ce-s9i">
                             <rect key="frame" x="0.0" y="46" width="343" height="34"/>
+                            <color key="backgroundColor" name="LoginTextFieldBackground"/>
                             <accessibility key="accessibilityConfiguration" identifier="PasswordTextField"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <textInputTraits key="textInputTraits"/>
+                            <connections>
+                                <outlet property="delegate" destination="-1" id="GXK-hL-ILD"/>
+                            </connections>
                         </textField>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bzt-Nk-Gi4">
                             <rect key="frame" x="0.0" y="92" width="343" height="40"/>
@@ -55,10 +65,15 @@
             <accessibility key="accessibilityConfiguration" identifier="LoginViewController"/>
             <constraints>
                 <constraint firstItem="vN6-xb-uue" firstAttribute="centerX" secondItem="D8g-i3-TXb" secondAttribute="centerX" id="TYa-cf-G9B"/>
-                <constraint firstItem="vN6-xb-uue" firstAttribute="centerY" secondItem="D8g-i3-TXb" secondAttribute="centerY" id="mKt-Wv-Wxm"/>
+                <constraint firstItem="vN6-xb-uue" firstAttribute="centerY" secondItem="D8g-i3-TXb" secondAttribute="centerY" priority="750" id="mKt-Wv-Wxm"/>
                 <constraint firstItem="vN6-xb-uue" firstAttribute="leading" secondItem="D8g-i3-TXb" secondAttribute="leading" constant="16" id="qEJ-DY-scQ"/>
             </constraints>
             <point key="canvasLocation" x="-394" y="-13"/>
         </view>
     </objects>
+    <resources>
+        <namedColor name="LoginTextFieldBackground">
+            <color red="0.46274509803921571" green="0.46274509803921571" blue="0.50196078431372548" alpha="0.11999999731779099" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
 </document>
