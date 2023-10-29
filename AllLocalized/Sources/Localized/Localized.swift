@@ -7,7 +7,8 @@
 
 import Foundation
 
-@propertyWrapper struct Localized {
+@propertyWrapper 
+public struct Localized {
     public var wrappedValue: String {
         didSet { wrappedValue = wrappedValue.localized }
     }

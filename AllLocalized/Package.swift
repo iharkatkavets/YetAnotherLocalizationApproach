@@ -35,8 +35,8 @@ let package = Package(
         ),
 
         // Library that exposes a macro as part of its API, which is used in client programs.
-        .target(name: "AllLocalized", 
-                dependencies: ["AllLocalizedMacros"]),
+        .target(name: "AllLocalized", dependencies: ["AllLocalizedMacros", "Localized"]),
+        .target(name: "Localized"),
 
         // A client of the library, which is able to use the macro in its own code.
         .executableTarget(name: "AllLocalizedClient", 
