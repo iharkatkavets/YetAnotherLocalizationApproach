@@ -7,8 +7,6 @@
 
 import Foundation
 
-typealias L = LocalizableKeys
-
 @propertyWrapper struct Localized {
     var wrappedValue: String {
         didSet { wrappedValue = wrappedValue.localized }
@@ -24,6 +22,8 @@ extension String {
         return NSLocalizedString(self, comment: "")
     }
 }
+
+typealias L = LocalizableKeys
 
 struct LocalizableKeys {
     struct Login {
