@@ -13,7 +13,6 @@
 		5419A8742AEB9ACF0078F632 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5419A8722AEB9ACF0078F632 /* LaunchScreen.storyboard */; };
 		5419A87F2AEB9ACF0078F632 /* AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5419A87E2AEB9ACF0078F632 /* AppTests.swift */; };
 		5419A8982AEB9B020078F632 /* LocalizationKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5419A8972AEB9B020078F632 /* LocalizationKeys.swift */; };
-		5419A89A2AEB9B420078F632 /* LocalizableKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5419A8992AEB9B420078F632 /* LocalizableKey.swift */; };
 		5419A8A82AEBA67B0078F632 /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5419A8A42AEBA67B0078F632 /* LoginPresenter.swift */; };
 		5419A8A92AEBA67B0078F632 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5419A8A52AEBA67B0078F632 /* LoginViewController.swift */; };
 		5419A8AB2AEBA67B0078F632 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5419A8A72AEBA67B0078F632 /* LoginViewController.xib */; };
@@ -24,6 +23,7 @@
 		5419A8BD2AEBAA940078F632 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5419A8BB2AEBAA940078F632 /* Localizable.strings */; };
 		5419A8BF2AEBAB600078F632 /* LoginScreenUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5419A8BE2AEBAB600078F632 /* LoginScreenUITests.swift */; };
 		5419A8C12AEBAC9A0078F632 /* UITestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5419A8C02AEBAC9A0078F632 /* UITestHelpers.swift */; };
+		54D12B432AEEA5A800EFEDCE /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54D12B422AEEA5A800EFEDCE /* AppState.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,7 +54,6 @@
 		5419A87E2AEB9ACF0078F632 /* AppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTests.swift; sourceTree = "<group>"; };
 		5419A8842AEB9ACF0078F632 /* AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5419A8972AEB9B020078F632 /* LocalizationKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizationKeys.swift; sourceTree = "<group>"; };
-		5419A8992AEB9B420078F632 /* LocalizableKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizableKey.swift; sourceTree = "<group>"; };
 		5419A8A42AEBA67B0078F632 /* LoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
 		5419A8A52AEBA67B0078F632 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		5419A8A72AEBA67B0078F632 /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
@@ -66,6 +65,7 @@
 		5419A8BE2AEBAB600078F632 /* LoginScreenUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreenUITests.swift; sourceTree = "<group>"; };
 		5419A8C02AEBAC9A0078F632 /* UITestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITestHelpers.swift; sourceTree = "<group>"; };
 		5419A8C22AEBB22B0078F632 /* pl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pl; path = pl.lproj/Localizable.strings; sourceTree = "<group>"; };
+		54D12B422AEEA5A800EFEDCE /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +116,7 @@
 		5419A8662AEB9ACD0078F632 /* App */ = {
 			isa = PBXGroup;
 			children = (
+				54D12B412AEEA59300EFEDCE /* Core */,
 				5419A8AD2AEBA6BE0078F632 /* Settings */,
 				5419A89B2AEBA5DA0078F632 /* Login */,
 				5419A8672AEB9ACD0078F632 /* AppDelegate.swift */,
@@ -171,9 +172,16 @@
 			children = (
 				5419A8BB2AEBAA940078F632 /* Localizable.strings */,
 				5419A8972AEB9B020078F632 /* LocalizationKeys.swift */,
-				5419A8992AEB9B420078F632 /* LocalizableKey.swift */,
 			);
 			path = Localization;
+			sourceTree = "<group>";
+		};
+		54D12B412AEEA59300EFEDCE /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				54D12B422AEEA5A800EFEDCE /* AppState.swift */,
+			);
+			path = Core;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -313,10 +321,10 @@
 				5419A8A92AEBA67B0078F632 /* LoginViewController.swift in Sources */,
 				5419A8A82AEBA67B0078F632 /* LoginPresenter.swift in Sources */,
 				5419A8B92AEBA7170078F632 /* AppCoordinator.swift in Sources */,
+				54D12B432AEEA5A800EFEDCE /* AppState.swift in Sources */,
 				5419A8B22AEBA6D20078F632 /* SettingsPresenter.swift in Sources */,
 				5419A8682AEB9ACD0078F632 /* AppDelegate.swift in Sources */,
 				5419A8982AEB9B020078F632 /* LocalizationKeys.swift in Sources */,
-				5419A89A2AEB9B420078F632 /* LocalizableKey.swift in Sources */,
 				5419A86A2AEB9ACD0078F632 /* SceneDelegate.swift in Sources */,
 				5419A8B32AEBA6D20078F632 /* SettingsViewController.swift in Sources */,
 			);

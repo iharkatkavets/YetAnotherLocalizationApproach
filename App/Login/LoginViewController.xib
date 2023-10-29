@@ -21,7 +21,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="vN6-xb-uue">
-                    <rect key="frame" x="16" y="280.5" width="343" height="126.5"/>
+                    <rect key="frame" x="16" y="277.5" width="343" height="132"/>
                     <subviews>
                         <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ytu-sd-cQg">
                             <rect key="frame" x="0.0" y="0.0" width="343" height="34"/>
@@ -36,8 +36,11 @@
                             <textInputTraits key="textInputTraits"/>
                         </textField>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bzt-Nk-Gi4">
-                            <rect key="frame" x="0.0" y="92" width="343" height="34.5"/>
+                            <rect key="frame" x="0.0" y="92" width="343" height="40"/>
                             <accessibility key="accessibilityConfiguration" identifier="Login"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="oKO-yf-dzG"/>
+                            </constraints>
                             <state key="normal" title="Button"/>
                             <buttonConfiguration key="configuration" style="plain" title="Button"/>
                             <connections>

@@ -2,5 +2,6 @@
 "Login.TextField.Username.Placeholder" = "Nazwa użytkownika";
 "Login.TextField.Password.Placeholder" = "Hasło";
 
+"Settings.Label.Welcome.Fmt" = "Zalogowano się jako %@. Powitanie!";
 "Settings.Button.Logout.Title" = "Wyloguj";
 

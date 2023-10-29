@@ -11,17 +11,19 @@ protocol SettingsViewOutput: AnyObject {
     func userDidPressLogout()
 }
 
-class SettingsPresenter {
+final class SettingsPresenter {
     weak var view: SettingsViewInput?
     var logoutBlock: (()->Void)?
+    let appState: AppState
 
-    init() {
+    init(_ appState: AppState) {
+        self.appState = appState
     }
-
 }
 
 extension SettingsPresenter: SettingsViewOutput {
     func userDidPressLogout() {
+        appState.reset()
         logoutBlock?()
     }
 }

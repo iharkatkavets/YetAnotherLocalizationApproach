@@ -10,7 +10,7 @@ import UIKit
 protocol LoginViewInput: AnyObject {
 }
 
-class LoginViewController: UIViewController {
+final class LoginViewController: UIViewController {
     var presenter: LoginViewOutput?
     @IBOutlet var usernameTextField: UITextField?
     @IBOutlet var passwordTextField: UITextField?
@@ -25,7 +25,7 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func login(_ button: UIButton) {
-        
+        presenter?.userDidPressLogin(usernameTextField?.text ?? "")
     }
 }
 
